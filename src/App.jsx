@@ -6,6 +6,7 @@ import { navItems } from "./nav-items";
 import TemplatePage from "./pages/TemplatePage";
 import ReceiptPage from "./pages/ReceiptPage";
 import Index from "./pages/Index";
+import CursorMessage from "./components/CursorMessage";
 
 const queryClient = new QueryClient();
 
@@ -13,6 +14,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
+      <CursorMessage />
       <BrowserRouter>
         <Routes>
           {navItems.map(({ to, page }) => (
